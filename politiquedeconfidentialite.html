@@ -5,13 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Politique de confidentialité</title>
   <link rel="stylesheet" href="style-legal.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="header">
+        <div class="container header-content">
+            
+            <nav class="nav">
+                <a href="index.html#heroCarousel" class="nav-link">Accueil</a>
+                <a href="index.html#propertyDetails" class="nav-link">Propriété</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-contact">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i data-lucide="phone"></i>
+                        <span>06 72 15 27 25</span>
+                    </div>
+                    <div class="contact-item">
+                        <i data-lucide="mail"></i>
+                        <span>nbloc10@gmail.com</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="scrollToContact()">Nous contacter</button>
+            </div>
+        </div>
+    </header>
   <main class="privacy">
     <h1>Politique de confidentialité</h1>
     <p>Nous ne collectons pas de cookies sur ce site.</p>
     <p>Les informations que vous envoyez via le formulaire de contact (nom, email, téléphone, message) sont utilisées uniquement pour répondre à votre demande et sont envoyées directement par email à la propriétaire du site. Elles ne sont pas conservées à des fins marketing et ne sont pas partagées avec des tiers.</p>
     <p>Conformément au RGPD, vous avez le droit de demander l’accès, la rectification ou la suppression de vos données personnelles. Pour exercer ce droit, contactez-nous à <a href="mailto:julien.bosspro@gmail.com">julien.bosspro@gmail.com</a>.</p>
   </main>
+      <footer class="footer">
+        <div class="container">
+
+            <div class="footer-bottom">
+                <span>&copy; 2025 JuBdev. Tous droits réservés.</span>
+                <div class="footer-links">
+                    <a href="../mentionslegales">Mentions légales</a>
+                    <a href="../politiquedeconfidentialite">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+function scrollToContact() {
+    window.location.href = "index.html#contact";
+}
+</script>
 </body>
 </html>

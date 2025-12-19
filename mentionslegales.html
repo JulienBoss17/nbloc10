@@ -5,14 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mentions légales</title>
   <link rel="stylesheet" href="style-legal.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="header">
+        <div class="container header-content">
+            
+            <nav class="nav">
+                <a href="index.html#heroCarousel" class="nav-link">Accueil</a>
+                <a href="index.html#propertyDetails" class="nav-link">Propriété</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-contact">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i data-lucide="phone"></i>
+                        <span>06 72 15 27 25</span>
+                    </div>
+                    <div class="contact-item">
+                        <i data-lucide="mail"></i>
+                        <span>nbloc10@gmail.com</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="scrollToContact()">Nous contacter</button>
+            </div>
+        </div>
+    </header>
   <main class="legal">
     <h1>Mentions légales</h1>
-    <p><strong>Éditeur du site :</strong> Julien Bossaert</p>
-    <p><strong>Adresse :</strong> 2 rue jean de la fontaine, 17180 Périgny</p>
+    <p><strong>Éditeur du site :</strong> Jubdev (Julien Bossaert)</p>
+    <p><strong>Adresse :</strong> 8 rue Simone Veil, 17700 Surgères</p>
     <p><strong>Email :</strong> <a href="mailto:julien.bosspro@gmail.com">julien.bosspro@gmail.com</a></p>
-    <p><strong>Hébergeur :</strong> OctoGency SARL (Webstrator), Lieu-dit En Roc, 81100 Castres, <a href="mailto:contact@webstrator.com">contact@webstrator.com</a></p>
+<p><strong>Hébergeur :</strong> OVH SAS Siège social : 2 rue Kellermann - 59100 Roubaix - France <a href="mailto:https://www.ovhcloud.com/fr/support/">https://www.ovhcloud.com/fr/support/</a></p>
   </main>
+      <footer class="footer">
+        <div class="container">
+
+            <div class="footer-bottom">
+                <span>&copy; 2025 JuBdev. Tous droits réservés.</span>
+                <div class="footer-links">
+                    <a href="../mentionslegales">Mentions légales</a>
+                    <a href="../politiquedeconfidentialite">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+function scrollToContact() {
+    window.location.href = "index.html#contact";
+}
+</script>
 </body>
 </html>
