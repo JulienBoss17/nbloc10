@@ -47,6 +47,17 @@ function scrollToContact() {
     }
 }
 
+// Smooth scroll to contact section
+function scrollToAccueil() {
+    const contactSection = document.getElementById('heroCarousel');
+    if (contactSection) {
+        contactSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
 // Form validation and submission
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

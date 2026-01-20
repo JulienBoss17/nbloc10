@@ -28,7 +28,8 @@
                         <span>nbloc10@gmail.com</span>
                     </div>
                 </div>
-                <button class="btn btn-primary" onclick="scrollToContact()">Nous contacter</button>
+                <button class="btn btn-primary mobile-only" onclick="scrollToAccueil()">Accueil</button>
+                <button class="btn btn-primary mobile-only" onclick="scrollToContact()">Nous contacter</button>
             </div>
         </div>
     </header>
@@ -43,7 +44,7 @@
         <div class="container">
 
             <div class="footer-bottom">
-                <span>&copy; 2025 JuBdev. Tous droits réservés.</span>
+                <span>&copy; 2026 Julien Bossaert (Jubdev). Tous droits réservés.</span>
                 <div class="footer-links">
                     <a href="../mentionslegales">Mentions légales</a>
                     <a href="../politiquedeconfidentialite">Politique de confidentialité</a>
@@ -53,6 +54,9 @@
     </footer>
     <script>
 function scrollToContact() {
+    window.location.href = "index.html#contact";
+}
+function scrollToAccueil() {
     window.location.href = "index.html#contact";
 }
 </script>

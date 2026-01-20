@@ -3,7 +3,7 @@
 /* Conteneur principal */
 main.legal, main.privacy {
     max-width: 800px;
-    margin: 250px auto;
+    margin: 150px auto;
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
@@ -52,13 +52,12 @@ li {
 /* Responsive */
 @media (max-width: 600px) {
     body {
-        padding: 0.5rem;
         font-size: 15px;
     }
 
     main.legal, main.privacy {
         padding: 1rem;
-        margin: 1rem auto;
+        margin: 200px auto;
     }
 
     h1 {

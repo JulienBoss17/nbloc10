@@ -135,7 +135,7 @@ p {
     height: 4rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .header-content {
         justify-content: center;
     }
@@ -200,13 +200,13 @@ p {
     gap: 0.25rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .nav {
         display: flex;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
     .contact-info {
         display: flex;
     }
@@ -763,6 +763,61 @@ section {
     cursor: not-allowed;
 }
 
+/* cookie-banner.css */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #f2f2f2;
+  color: #333;
+  padding: 15px 20px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 -1px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+
+  /* Animation */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#cookie-banner.hide {
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none; /* évite de cliquer dessus quand caché */
+}
+
+#cookie-banner button {
+  margin-left: 10px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+#cookie-banner #accept-cookies {
+  border: none;
+  background: #333;
+  color: #fff;
+}
+
+#cookie-banner #reject-cookies {
+  border: 1px solid #999;
+  background: #fff;
+  color: #333;
+}
+
+#cookie-banner a {
+  margin-left: 12px;
+  color: #666;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+
 /* Responsive improvements */
 @media (max-width: 767px) {
     .hero-text h1 {
@@ -784,5 +839,18 @@ section {
     }
 
     
+}
+
+
+/* Par défaut, on cache les boutons */
+.mobile-only {
+    display: none;
+}
+
+/* Sur écrans mobiles / tablettes (max-width: 768px), on les affiche */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: inline-block; /* ou flex si tu veux un alignement horizontal/vertical */
+    }
 }
 

@@ -28,21 +28,25 @@
                         <span>nbloc10@gmail.com</span>
                     </div>
                 </div>
-                <button class="btn btn-primary" onclick="scrollToContact()">Nous contacter</button>
+                <button class="btn btn-primary mobile-only" onclick="scrollToAccueil()">Accueil</button>
+                <button class="btn btn-primary mobile-only" onclick="scrollToContact()">Nous contacter</button>
             </div>
         </div>
     </header>
   <main class="privacy">
     <h1>Politique de confidentialité</h1>
-    <p>Nous ne collectons pas de cookies sur ce site.</p>
-    <p>Les informations que vous envoyez via le formulaire de contact (nom, email, téléphone, message) sont utilisées uniquement pour répondre à votre demande et sont envoyées directement par email à la propriétaire du site. Elles ne sont pas conservées à des fins marketing et ne sont pas partagées avec des tiers.</p>
-    <p>Conformément au RGPD, vous avez le droit de demander l’accès, la rectification ou la suppression de vos données personnelles. Pour exercer ce droit, contactez-nous à <a href="mailto:julien.bosspro@gmail.com">julien.bosspro@gmail.com</a>.</p>
+    <p>Ce site utilise des cookies de mesure d’audience via Google Analytics, uniquement après obtention du consentement de l’utilisateur.</p>
+    <p>Les cookies de mesure d’audience permettent d’analyser la fréquentation et l’utilisation du site afin d’en améliorer le contenu et l’expérience utilisateur.</p>
+    <p>Les informations transmises via le formulaire de contact (nom, adresse email, numéro de téléphone, message) sont utilisées exclusivement pour répondre à votre demande.</p>
+    <p>Ces données sont transmises par email au responsable du site, ne sont pas stockées dans une base de données, ne sont pas utilisées à des fins commerciales ou marketing et ne sont pas transmises à des tiers.</p>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d’un droit d’accès, de rectification et de suppression des données vous concernant.</p>
+    <p>Pour exercer ce droit, contactez-nous à <a href="mailto:julien.bosspro@gmail.com">julien.bosspro@gmail.com</a>.</p>
   </main>
       <footer class="footer">
         <div class="container">
 
             <div class="footer-bottom">
-                <span>&copy; 2025 JuBdev. Tous droits réservés.</span>
+                <span>&copy; 2026 Julien Bossaert (Jubdev). Tous droits réservés.</span>
                 <div class="footer-links">
                     <a href="../mentionslegales">Mentions légales</a>
                     <a href="../politiquedeconfidentialite">Politique de confidentialité</a>
@@ -52,6 +56,9 @@
     </footer>
     <script>
 function scrollToContact() {
+    window.location.href = "index.html#contact";
+}
+function scrollToAccueil() {
     window.location.href = "index.html#contact";
 }
 </script>
