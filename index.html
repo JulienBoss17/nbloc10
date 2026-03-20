@@ -213,13 +213,9 @@
                 <p>Découvrez l’emplacement de la maison et les points d’intérêt à proximité (gare, écoles, commerces...).</p>
             </div>
             <div class="contact-details">
-                <iframe
-                class="map-frame"
-                src="https://www.google.com/maps?q=12+Rue+Julia+et+Maurice+Marcou,+17700+Surgères,+France&output=embed"
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <div class="contact-details" id="map-container">
+                    <p>La carte Google Maps sera affichée après votre consentement.</p>
+                </div>
             </div>
             </div>
         </div>
@@ -312,7 +308,7 @@
         <div class="container">
 
             <div class="footer-bottom">
-                <span>&copy; 2026 Julien Bossaert (Jubdev). Tous droits réservés.</span>
+                <span>&copy; 2026 Jubdev . Tous droits réservés.</span>
                 <div class="footer-links">
                     <a href="/mentionslegales">Mentions légales</a>
                     <a href="/politiquedeconfidentialite">Politique de confidentialité</a>
@@ -330,10 +326,10 @@
     <!-- Google tag (gtag.js) -->
 <!-- Bandeau Cookies minimaliste -->
 <div id="cookie-banner">
-  Ce site utilise Google Analytics pour améliorer l'expérience utilisateur.
+  <p>Ce site utilise Google Analytics pour améliorer l'expérience utilisateur et Google Maps pour afficher la localisation. 
+  <a href="/politiquedeconfidentialite">Politique de confidentialité</a></p>
   <button id="accept-cookies">Accepter</button>
   <button id="reject-cookies">Refuser</button>
-  <a href="/politiquedeconfidentialite">Politique de confidentialité</a>
 </div>
 
 <script>
@@ -343,26 +339,8 @@
     const banner = document.getElementById('cookie-banner');
     banner.classList.add('hide');
     // Supprime complètement après l'animation
-    setTimeout(() => banner.remove(), 400); // 400ms = durée de la transition CSS
+    setTimeout(() => banner.remove(), 400);
   }
-
-  if (consent === 'accepted') {
-    loadGA();
-    hideBanner();
-  } else if (consent === 'rejected') {
-    hideBanner();
-  }
-
-  document.getElementById('accept-cookies').addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'accepted');
-    loadGA();
-    hideBanner();
-  });
-
-  document.getElementById('reject-cookies').addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'rejected');
-    hideBanner();
-  });
 
   function loadGA() {
     const script = document.createElement('script');
@@ -378,6 +356,43 @@
       gtag('config', 'G-8VYPWHW6EQ');
     };
   }
+
+  function loadMap() {
+    const mapContainer = document.getElementById('map-container');
+    if (mapContainer && !mapContainer.querySelector('iframe')) {
+      const iframe = document.createElement('iframe');
+      iframe.src = "https://www.google.com/maps?q=12+Rue+Julia+et+Maurice+Marcou,+17700+Surgères,+France&output=embed";
+      iframe.width = "600";
+      iframe.height = "450";
+      iframe.style.border = 0;
+      iframe.loading = "lazy";
+      iframe.referrerPolicy = "no-referrer-when-downgrade";
+      mapContainer.innerHTML = "";
+      mapContainer.appendChild(iframe);
+    }
+  }
+
+  // Vérification initiale du consentement
+  if (consent === 'accepted') {
+    loadGA();
+    loadMap();
+    hideBanner();
+  } else if (consent === 'rejected') {
+    hideBanner();
+  }
+
+  // Événements sur les boutons
+  document.getElementById('accept-cookies').addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    loadGA();
+    loadMap();
+    hideBanner();
+  });
+
+  document.getElementById('reject-cookies').addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'rejected');
+    hideBanner();
+  });
 </script>
 
 
