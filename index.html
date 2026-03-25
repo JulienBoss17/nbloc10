@@ -153,7 +153,7 @@
                                 </div>
                                 <div class="feature-info">
                                     <p class="feature-label">Chambres</p>
-                                    <p class="feature-value">3</p>
+                                    <p class="feature-value">4</p>
                                 </div>
                             </div>
                             <div class="feature-card">
@@ -362,8 +362,7 @@
     if (mapContainer && !mapContainer.querySelector('iframe')) {
       const iframe = document.createElement('iframe');
       iframe.src = "https://www.google.com/maps?q=12+Rue+Julia+et+Maurice+Marcou,+17700+Surgères,+France&output=embed";
-      iframe.width = "600";
-      iframe.height = "450";
+      iframe.className = "map-frame";
       iframe.style.border = 0;
       iframe.loading = "lazy";
       iframe.referrerPolicy = "no-referrer-when-downgrade";
